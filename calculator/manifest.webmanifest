@@ -1,0 +1,17 @@
+{
+    "name": "Green Calculator",
+    "short_name": "Calculator",
+    "start_url": "/calculator/",
+    "scope": "/calculator/",
+    "display": "standalone",
+    "theme-color": "#66bb6a",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "assets/icons/380.png",
+            "sizes": "308x380",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}
