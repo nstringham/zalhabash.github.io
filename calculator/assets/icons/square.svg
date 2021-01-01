@@ -1,9 +1,10 @@
-<svg width="256" height="256" viewBox="-50 -50 376 376" xmlns="http://www.w3.org/2000/svg">
+<svg width="256" height="256" viewBox="-50 -50 356 356" xmlns="http://www.w3.org/2000/svg">
     <title>Icon</title>
     <rect
         x="-50" y="-50"
         height="100%" width="100%"
         fill="#c8e6c9"
+        rx="17.5%"
     ></rect>
     <rect
         x="30" y="4"
