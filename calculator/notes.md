@@ -182,6 +182,27 @@ Got all 100's!
     
 https://developer.mozilla.org/en-US/docs/Web/Manifest
 
+- "icons": put in order of what you want the browser to use, and if it doesn't work the browser is supposed to use the next thing down. And put .svg at the top because it's the highest quality.
+
+## SVG ##
+- An svg file is kind of an image
+- Describes shapes
+
+Pros:
+    - Use it at any resolution you want
+
+Cons:
+    - No specific size
+    - Every time you display it, you have to do calculations to figure out what each pixel color is; can cause problems with older, slower computers
+
+Things I want to know more about:
+    - Raster images
+
+How to make one:
+
+- Rect: x,y: 0,0 is top left of the screen
+- Changing border-width by 8, for example, changes the total width of the shape by 8 (the border extends 4 in one direction and 4 in the other)
+
 
 
 
