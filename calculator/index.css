@@ -33,6 +33,7 @@ body {
     display: grid;
     place-items: center;
     min-height: 100vh;
+    box-sizing: border-box;
     margin: 0;
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
