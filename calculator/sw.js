@@ -4,9 +4,10 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(cacheName).then((cache) => {
             return cache.addAll([
-                'index.html',
-                'index.js',
-                'index.css',
+                '/calculator/',
+                '/calculator/index.js',
+                '/calculator/index.css',
+                '/calculator/assets/icons/transparent.svg',
             ]);
         }),
     );
@@ -18,4 +19,4 @@ self.addEventListener('fetch', (event) => {
             return caches.match(event.request);
         }),
     );
-})
+});
