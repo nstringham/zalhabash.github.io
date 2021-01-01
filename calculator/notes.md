@@ -183,6 +183,9 @@ Got all 100's!
 https://developer.mozilla.org/en-US/docs/Web/Manifest
 
 - "icons": put in order of what you want the browser to use, and if it doesn't work the browser is supposed to use the next thing down. And put .svg at the top because it's the highest quality.
+- "purpose": maskable
+    - Android versions before 8, app icons have whatever shape they want
+    - Android versions after 8, forced to have an icon shape, so it'll use the maskable version and crop your image to the shape 
 
 ## SVG ##
 - An svg file is kind of an image
@@ -203,7 +206,15 @@ How to make one:
 - Rect: x,y: 0,0 is top left of the screen
 - Changing border-width by 8, for example, changes the total width of the shape by 8 (the border extends 4 in one direction and 4 in the other)
 
+## Service Worker
 
+https://web.dev/offline-cookbook/
 
+- We want to download the file when the app is installed and update it when the app is updated
 
+- When does it run?
+    - Doesn't run in the page, it runs by itself
+    - It will run for a little longer after you close the page
+    - Sometimes Chrome will wake it up 
+- Service worker installed separately 
 
