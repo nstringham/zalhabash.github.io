@@ -5,6 +5,7 @@
     "scope": "/calculator/",
     "display": "standalone",
     "theme_color": "#66bb6a",
+    "background_color": "#005005",
     "orientation": "portrait",
     "icons": [
         {
