@@ -22,7 +22,7 @@
         --button-color-hover: #1a631e;
         --button-color-active: #134e16;
     }
-    .status-bar-fill {
+    #status-bar-fill {
         display: none;
     }
 }
@@ -41,7 +41,7 @@ body {
     padding-right: env(safe-area-inset-right);
 }
 
-.status-bar-fill {
+#status-bar-fill {
     position: fixed;
     top: 0;
     right: 0;
