@@ -4,7 +4,7 @@
     "start_url": "/calculator/",
     "scope": "/calculator/",
     "display": "standalone",
-    "theme-color": "#66bb6a",
+    "theme_color": "#66bb6a",
     "orientation": "portrait",
     "icons": [
         {
