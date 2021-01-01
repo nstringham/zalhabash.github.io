@@ -8,10 +8,94 @@
     "orientation": "portrait",
     "icons": [
         {
-            "src": "assets/icons/512.png",
+            "src": "assets/icons/transparent.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/icons/transparent-512.webp",
+            "sizes": "512x512",
+            "type": "image/webp",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/icons/transparent-192.webp",
+            "sizes": "192x192",
+            "type": "image/webp",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/icons/transparent-512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any"
+        },
+        {
+            "src": "assets/icons/transparent-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/icons/maskable.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "maskable"
+        },
+        {
+            "src": "assets/icons/maskable-512.webp",
+            "sizes": "512x512",
+            "type": "image/webp",
+            "purpose": "maskable"
+        },
+        {
+            "src": "assets/icons/maskable-192.webp",
+            "sizes": "192x192",
+            "type": "image/webp",
+            "purpose": "maskable"
+        },
+        {
+            "src": "assets/icons/maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "assets/icons/maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "assets/icons/mono.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "monochrome"
+        },
+        {
+            "src": "assets/icons/mono-512.webp",
+            "sizes": "512x512",
+            "type": "image/webp",
+            "purpose": "monochrome"
+        },
+        {
+            "src": "assets/icons/mono-192.webp",
+            "sizes": "192x192",
+            "type": "image/webp",
+            "purpose": "monochrome"
+        },
+        {
+            "src": "assets/icons/mono-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "monochrome"
+        },
+        {
+            "src": "assets/icons/mono-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "monochrome"
         }
     ]
 }
