@@ -18,9 +18,16 @@ document.getElementById('2').addEventListener('click', alert2);
         
 Write code that's easy to read and disregard efficiency if you have a dataset that is less than 10,000 rows wide
 
-var z = [{type: "inital", value:5}, {type: "add", value:3}]            Complicated
+### random code chunk (note: this is more complicated than what was actually used)
+```js
+var z = [{type: "inital", value:5}, {type: "add", value:3}]            
+```
 
 Script loads before user clicks button, so it's ok to have .push in the body. If it was in a separate file, default behavior is to wait.
+
+```js 
+<script src="index.js" type="text/javascript"></script>
+```
 
 ### scrict/nonstrict ###
 ```js
@@ -46,9 +53,9 @@ addOne = (x) => x + 1
 
 0000 0101
 
-8 is a byte
-4 is a word
-1 is a bit
+- 8 is a byte
+- 4 is a word
+- 1 is a bit
 
 ## assorted formatting tips ##
 1. shift + alt + F: FIXES YOUR FORMAT
@@ -58,13 +65,13 @@ unless it's text
 if you're not sure, just use div
 
 3. class vs. id:
-- Use class if you think you want other thinks that act like that
--  In this project, he would call: class = wrapper, and if id, calculator
+    - Use class if you think you want other thinks that act like that
+    -  In this project, he would call: class = wrapper, and if id, calculator
 *don't want more than one thing with the same id
 
 4. Grid: 2 approaches
-- give everything its particular space, OR
-- let everything go where it wants and fix the ones that are misbehaving
+    - give everything its particular space, OR
+    - let everything go where it wants and fix the ones that are misbehaving
     
 5. Don't use transparency unless you have to!
 
@@ -103,31 +110,38 @@ BEST OF BOTH WORLDS:
 `--button-size: min(15vh, 22vw);`            
             grid: 4 accross, so 22 is slightly less than 100 / 4, and same for the other side
 
+```javascript
 element.prototype.click 
 
-```javascript
 let str = "hi"
 str.concat()
 String.prototype.concat = console.log;
 ```
-            prototypal mutation: problematic
-            don't do it
-            sometimes when you can use prototype for a class you made
-            every time you run concat afterwards, will do console.log
+prototypal mutation: problematic
+don't do it
+sometimes when you can use prototype for a class you made
+every time you run concat afterwards, will do console.log
 
-Github
-            can create a branch to mess around with things without messing up your main website
+## Github  ##
+can create a branch to mess around with things without messing up your main website
 
 Standardized ways to name commmits
-            Make small commits
-            Explain what you did
-            Don't use past tense
-Important to have a development system so that you can test things out and run them only
-            on your computer without having to publish anything
+1. Make small commits
 
-Javascript is a scripting language, and there is no javascript binary, so you need an engine
+2. Explain what you did
 
-Many ways to do this --- we'll use Node
+3. Don't use past tense
+
+- Important to have a development system so that you can test things out and run them only on your computer without having to publish anything
+
+- Javascript is a scripting language, and there is no javascript binary, so you need an engine
+
+- Many ways to do this --- we'll use Node
+
+### Licenses ###
+1. MIT License (pretty unrestrictive)
+
+2. If you license is too restrictive, not allowed to put your code on GitHub publicly
 
 ## Using Windows Powershell b/c for some reason, VS Code terminal not working with node ##
 ```bash
@@ -145,11 +159,30 @@ http-server -c0 .
 Available on: 2 of them. First is for other devices; second is for your own device
         
 ## URL: ##
-http://192.168.128.12:8080
-        :80 is assumed 
-        file
-        query string: how to interact with that file
-        #: point you to a specific element id
-alot of features on the web that only work for https
-caveat: all those features should work on one http (don't need to encrypt if it's yourself)
-http://localhost (in our case: http://localhost:adad)
+
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
+
+
+- http://192.168.128.12:8080
+
+- :80 is assumed for http
+- file
+- query string: how to interact with that file
+- #: point you to a specific element id
+- alot of features on the web that only work for https
+- caveat: all those features should work on one http (don't need to encrypt if it's yourself)
+http://localhost (in our case: http://localhost:8080)
+
+## Lighthouse ##
+
+Got all 100's!
+
+## Web App Manifest ##
+- either: manifest.webmanifest or manifest.json
+    
+https://developer.mozilla.org/en-US/docs/Web/Manifest
+
+
+
+
+
