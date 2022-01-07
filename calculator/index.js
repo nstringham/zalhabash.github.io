@@ -11,6 +11,13 @@ const operators = {
     '−': (x, y) => x - y,
 }
 
+const operatorPrecedence = {
+    '×': 1,
+    '÷': 1,
+    '+': 0,
+    '−': 0,
+}
+
 document.addEventListener('keydown', (event) => {
 
     switch (event.key) {
@@ -72,59 +79,51 @@ document.addEventListener('keydown', (event) => {
 
 function calculateAndDisplay() {
 
-    calculateOperator('×', '÷');
-    calculateOperator('+', '−');
+    const matches = input.matchAll(/[×÷+−]|[^×÷+−]+/g);
 
-    //1×⁻1+2
+    const postfix = [];
 
-    display.innerHTML = input;
-}
+    const stack = [];
 
-function calculateOperator(...currentOperators) {
-    // multiplication/division
-    let firstNum;
-    let secondNum;
+    for (const match of matches) {
+        const part = match[0];
 
-    let beginInd1;
-    let endInd1;
-    let beginInd2;
-    let endInd2;
-    let operationSymbol;
-
-    for (let i = 0; i < input.length; i++) {
-        const element = input[i];
-
-        if (currentOperators.includes(element)) {
-            operationSymbol = i;
-            endInd1 = i - 1;    //the last digit of the first number
-            beginInd2 = i + 1;  //the first digit of the second number
-
-            //scrap bits of stuff --->
-            // if (input[endInd1+2] ) {            build in a check for consecutive × or ÷ symbols?
-            //                                     not here but somewhere
-            // }
-
-            beginInd1 = i;
-            while (numericSymbols.includes(input[beginInd1 - 1])) {
-                beginInd1 -= 1;         //backpedal until the beginning of the first number
+        if (part in operators) {
+            while (true) {
+                const top = stack[stack.length - 1];
+                if (operatorPrecedence[top] >= operatorPrecedence[part]) {
+                    postfix.push(stack.pop());
+                } else {
+                    stack.push(part);
+                    break;
+                }
             }
-
-            endInd2 = i;    //go to the location of your × or ÷ 
-            while (numericSymbols.includes(input[endInd2 + 1])) {
-                endInd2 += 1;          //go forward until the end of the second number
-            }
-
-
-            firstNum = Number(input.substring(beginInd1, endInd1 + 1));
-            secondNum = Number(input.substring(beginInd2, endInd2 + 1));
-
-            input =
-                input.substring(0, beginInd1) +
-                String(operators[element](firstNum, secondNum)) +
-                input.substring(endInd2 + 1)
-
-            i = beginInd1;
+        } else {
+            const number = Number(part);
+            postfix.push(number);
         }
+    }
+
+    while (stack.length > 0) {
+        postfix.push(stack.pop());
+    }
+
+    for (const element of postfix) {
+        if (element in operators) {
+            const y = stack.pop();
+            const x = stack.pop();
+            stack.push(operators[element](x, y));
+        } else {
+            stack.push(element);
+        }
+    }
+
+    if (isNaN(stack[0])) {
+        input = '';
+        display.innerHTML = 'Error';
+    } else {
+        input = String(stack[0]);
+        display.innerHTML = input;
     }
 }
 
