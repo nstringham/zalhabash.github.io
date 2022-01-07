@@ -1,3 +1,5 @@
+/// <reference lib="WebWorker" />
+
 const cacheName = "static-cache-v1";
 
 self.addEventListener('install', (event) => {
