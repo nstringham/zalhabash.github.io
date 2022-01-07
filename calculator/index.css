@@ -92,7 +92,6 @@ body {
     /*font weight doesn't have to be dynamic*/
     font-weight: 500;
     font-size: var(--font-size);
-    text-transform: uppercase;
 }
 
 #display {
