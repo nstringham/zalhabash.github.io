@@ -110,6 +110,19 @@ body {
     /* padding on the right and the left */
     overflow-x: auto;
     scroll-behavior: smooth;
+    /* Firefox Scrollbar */
+    scrollbar-color: var(--scroll-thumb-color) var(--scroll-track-color);
+}
+
+/* Webkit Stuff Scrollbar */
+.style-scrollbar #display::-webkit-scrollbar {
+    height: 12px;
+    background-color: var(--scroll-track-color);
+}
+
+.style-scrollbar #display::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: 8px;
 }
 
 .wrapper button {
