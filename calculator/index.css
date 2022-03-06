@@ -1,5 +1,5 @@
 :root {
-    /*colors*/
+    /* colors */
     --background-color: #ffffff;
     --text-color: #000000;
     --display-color: #77be7d;
@@ -27,7 +27,7 @@
         --scroll-track-color: rgb(0 0 0 / 13%);
     }
 
-    /*for Apple safe area*/
+    /* for Apple safe area */
     #status-bar-fill {
         display: none;
     }
@@ -48,7 +48,7 @@ body {
     padding-right: env(safe-area-inset-right);
 }
 
-/*for Apple safe area*/
+/* for Apple safe area */
 #status-bar-fill {
     position: fixed;
     top: 0;
@@ -95,7 +95,7 @@ body {
 .wrapper>* {
     border-radius: 8px;
     font-family: 'Roboto Mono', sans-serif;
-    /*font weight doesn't have to be dynamic*/
+    /* font weight doesn't have to be dynamic */
     font-weight: 500;
     font-size: var(--font-size);
 }
@@ -135,7 +135,7 @@ body {
     border: none;
     outline: none;
     transition: background-color 0.1s ease-in-out;
-    /*slow at beg and end, fast in middle*/
+    /* slow at beg and end, fast in middle */
 
 
     /* since on hover you have background color, can get rid of default */
