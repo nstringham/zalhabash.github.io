@@ -19,7 +19,6 @@ const operatorPrecedence = {
 }
 
 document.addEventListener('keydown', (event) => {
-
     switch (event.key) {
         case '1':
             document.querySelector('#button-1').click();
@@ -78,7 +77,6 @@ document.addEventListener('keydown', (event) => {
 });
 
 function calculateAndDisplay() {
-
     const matches = input.matchAll(/[×÷+−]|[^×÷+−]+/g);
 
     const postfix = [];
