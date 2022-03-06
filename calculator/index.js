@@ -77,7 +77,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 function calculateAndDisplay() {
-    const matches = input.matchAll(/[×÷+−]|[^×÷+−]+/g);
+    const matches = input.matchAll(/[×÷+−]|-?([0-9]+\.[0-9]*|\.?[0-9]+)(e[+-]?[0-9]+)?/g);
 
     const postfix = [];
 
