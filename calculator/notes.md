@@ -65,7 +65,7 @@ unless it's text
 if you're not sure, just use div
 
 3. class vs. id:
-    - Use class if you think you want other thinks that act like that
+    - Use class if you think you want other things that act like that
     -  In this project, he would call: class = wrapper, and if id, calculator
 *don't want more than one thing with the same id
 
@@ -218,3 +218,14 @@ https://web.dev/offline-cookbook/
     - Sometimes Chrome will wake it up 
 - Service worker installed separately 
 
+## The flex end thingy lol ;)
+
+Remnants of an ancient, long-gone function in my code that is lost to history.
+flex-end right in eng, left in arabic
+
+## Testing for issue #7
+(that one calculator bug where the numbers go off the end of the display)
+
+```javascript
+pushAndDisplay("11111111111111111111111111111111")
+```
