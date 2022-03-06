@@ -6,6 +6,8 @@
     --button-color: rgb(178, 250, 180);
     --button-color-hover: #91df95;
     --button-color-active: #7db980;
+    --scroll-thumb-color: rgb(0 0 0 / 18%);
+    --scroll-track-color: rgb(255 255 255 / 25%);
 
     --button-size: max(min(15vh, 22vw, 100px), 25px);
     --font-size: calc(var(--button-size) / 3);
@@ -21,6 +23,8 @@
         --button-color: #2e7d32;
         --button-color-hover: #1a631e;
         --button-color-active: #134e16;
+        --scroll-thumb-color: rgb(255 255 255 / 35%);
+        --scroll-track-color: rgb(0 0 0 / 13%);
     }
 
     /* for Apple safe area */
@@ -101,12 +105,26 @@ body {
     grid-column: 1 / -1;
     /* 1 is the line before the first item */
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     background-color: var(--display-color);
-    justify-content: flex-end;
-    /* flex-end right in eng, left in arabic */
     padding-inline: 24px;
     /* padding on the right and the left */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    /* Firefox Scrollbar */
+    scrollbar-color: var(--scroll-thumb-color) var(--scroll-track-color);
+}
+
+/* Webkit Stuff Scrollbar */
+.style-scrollbar #display::-webkit-scrollbar {
+    height: 12px;
+    background-color: var(--scroll-track-color);
+}
+
+.style-scrollbar #display::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: 8px;
 }
 
 .wrapper button {

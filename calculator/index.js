@@ -130,6 +130,7 @@ function calculateAndDisplay() {
 function pushAndDisplay(x) {
     input += x
     display.innerHTML = input;
+    display.scrollTo(0, 0);
 }
 
 function popAndDisplay() {
@@ -150,4 +151,23 @@ window.addEventListener('load', function () {
         // registration failed :(
         console.log('ServiceWorker registration failed: ', err);
     });
+});
+
+/* checks if the scrollbar has a width and sets the style-scrollbar class accordingly*/
+/* This is Nate's stuff. */
+window.requestIdleCallback(() => {
+    const outerDiv = document.createElement("div");
+    outerDiv.style.position = "fixed";
+    const innerDiv = document.createElement("div");
+    innerDiv.style.overflowY = "scroll";
+    outerDiv.appendChild(innerDiv);
+    document.body.appendChild(outerDiv);
+    if (outerDiv.clientWidth > 0) {
+        //desktop style scrollbars
+        document.documentElement.classList.add("style-scrollbar");
+    } else {
+        //mobile style scrollbars
+        document.documentElement.classList.remove("style-scrollbar");
+    }
+    outerDiv.remove();
 });
