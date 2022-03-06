@@ -17,7 +17,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: #121212;
-        /*why? eyestrain, LCD's can't show black, OLED smear problems*/
+        /* why? eyestrain, LCD's can't show black, OLED smear problems */
         --text-color: #ffffff;
         --display-color: #005005;
         --button-color: #2e7d32;
@@ -138,7 +138,7 @@ body {
     /*slow at beg and end, fast in middle*/
 
 
-    /* since on hover you have background color, can get rid of deafault */
+    /* since on hover you have background color, can get rid of default */
 
     /* box shadow animation: box-shadow: 2px 4px rgb(59, 59, 59); */
 
