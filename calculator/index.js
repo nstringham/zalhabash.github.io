@@ -130,6 +130,7 @@ function calculateAndDisplay() {
 function pushAndDisplay(x) {
     input += x
     display.innerHTML = input;
+    display.scrollTo(0, 0);
 }
 
 function popAndDisplay() {

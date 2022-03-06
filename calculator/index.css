@@ -99,12 +99,13 @@ body {
     grid-column: 1 / -1;
     /* 1 is the line before the first item */
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     background-color: var(--display-color);
-    justify-content: flex-end;
-    /*flex-end right in eng, left in arabic*/
     padding-inline: 24px;
     /* padding on the right and the left */
+    overflow-x: auto;
+    scroll-behavior: smooth;
 }
 
 .wrapper button {
