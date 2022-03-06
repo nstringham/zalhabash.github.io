@@ -153,7 +153,7 @@ window.addEventListener('load', function () {
     });
 });
 
-/* checks if the scrollbar has a width and sets the style-scrollbar class accordingly*/
+/* checks if the scrollbar has a width and sets the style-scrollbar class accordingly */
 /* This is Nate's stuff. */
 window.requestIdleCallback(() => {
     const outerDiv = document.createElement("div");
@@ -163,10 +163,10 @@ window.requestIdleCallback(() => {
     outerDiv.appendChild(innerDiv);
     document.body.appendChild(outerDiv);
     if (outerDiv.clientWidth > 0) {
-        //desktop style scrollbars
+        // desktop style scrollbars
         document.documentElement.classList.add("style-scrollbar");
     } else {
-        //mobile style scrollbars
+        // mobile style scrollbars
         document.documentElement.classList.remove("style-scrollbar");
     }
     outerDiv.remove();
