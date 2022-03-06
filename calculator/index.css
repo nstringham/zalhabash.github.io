@@ -26,6 +26,7 @@
         --scroll-thumb-color: rgb(255 255 255 / 35%);
         --scroll-track-color: rgb(0 0 0 / 13%);
     }
+
     /*for Apple safe area*/
     #status-bar-fill {
         display: none;
@@ -46,6 +47,7 @@ body {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
 }
+
 /*for Apple safe area*/
 #status-bar-fill {
     position: fixed;
